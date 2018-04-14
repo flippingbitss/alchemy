@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour {
     public float Deffense = 0; //percent
 
     //Privates
-    private float Health;
+    public float Health;
     private GameObject Enemy = null;
     private GameController gameController = null;
 
