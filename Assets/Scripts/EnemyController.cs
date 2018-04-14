@@ -12,17 +12,20 @@ public class EnemyController : MonoBehaviour {
     public float Deffense = 0; //percent
 
     private float Health;
+    private float Speed;
 
     // Use this for initialization
     void Start()
     {
         Health = MaxHealth;
+        Speed = AttackSpeed;
+        InvokeRepeating("DoDamage", 0, Speed);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     public void TakeDamage(float damage)
@@ -33,15 +36,8 @@ public class EnemyController : MonoBehaviour {
             this.Health = 0;
             Debug.Log("Enemy is dead");
             controller.isBattling = false;
+            CancelInvoke();
         }
-    }
-
-    public void UsePotion(IPotion potion)
-    {
-        //if (potion.Heal)
-        //{
-        //    Health += potion.Heal.Health;
-        //}
     }
 
     public void DoDamage()
