@@ -1,5 +1,5 @@
 ﻿public interface IPotion
 {
-    string Name { get; set; }
+    string Name { get; }
     void Consume(PlayerController pc);
 }
