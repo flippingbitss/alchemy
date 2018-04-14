@@ -25,7 +25,20 @@ public class EnemyController : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        
+        if(!controller.isBattling)
+        {
+            CancelInvoke();
+        } else
+        {
+            InvokeRepeating("DoDamage", 0, Speed);
+        }
+
+        InvokeRepeating("HealOverTime", 60, Speed * 10);
+    }
+
+    public void HealOverTime()
+    {
+        this.Health += 30;
     }
 
     public void TakeDamage(float damage)
