@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 1656067747}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -329,10 +329,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 893504071}
+  controller: {fileID: 1957666651}
   Damage: 10
-  Health: 100
+  MaxHealth: 100
   AttackSpeed: 5
   Deffense: 0
+  isDead: 0
+  level: 1
 --- !u!4 &1656067748
 Transform:
   m_ObjectHideFlags: 0
