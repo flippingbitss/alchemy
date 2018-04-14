@@ -6,7 +6,7 @@ public class PlayerController : MonoBehaviour {
 
     public float Damage = 10;
     public float Health = 100;
-    public float AttackSpeed = 5;
+    public float AttackSpeed = 5; //attacks per second
     public float Deffense = 0; //percent
 
 	// Use this for initialization
